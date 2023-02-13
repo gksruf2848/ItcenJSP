@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,14 +27,20 @@ function checkform2() {
 		loginform.passwd.focus();
 		return false;
 	}
+	if(loginform.name.value == "") {
+		alert("이름을 입력하세요.");
+		loginform.name.focus();
+		return false;
+	}
 	loginform.submit();
 }
 </script>
 <body>
-<form name="loginform" method="post">
-아이디 : <input type=text name=id><br>
-비밀번호 : <input type=password name=passwd><br>
-<input type=button value="로그인" onClick="checkform2()">
-</form>
+	<form name="loginform" method="post" action="login_process.jsp">
+		아이디 : <input type=text name=id><br>
+		비밀번호 : <input type=password name=passwd><br>
+		이름 : <input type=text name=name><br>
+		<input type=button value="로그인" onClick="checkform2()">
+	</form>
 </body>
 </html>
