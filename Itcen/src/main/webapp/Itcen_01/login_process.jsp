@@ -13,7 +13,7 @@ String id = request.getParameter("id");
 String passwd = request.getParameter("passwd");
 
 if(id.equals("admin") && passwd.equals("1111")) {
-	response.sendRedirect("redirect.jsp");
+	out.print("로그인 성공");
 } else {
 	out.print("로그인 실패");
 }
