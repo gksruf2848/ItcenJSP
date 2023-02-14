@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	<form name="Loginform" method="post" action="cookie_process.jsp">
+	<form name="Loginform" method="post" action="session_process.jsp">
 		아이디 : <input type=text name=id><br>
 		비밀번호 : <input type=password name=pw><br>
 		<input type=submit value="로그인">
